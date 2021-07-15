@@ -68,13 +68,17 @@
             <ul class="navbar-item flex-row navbar-dropdown">
                 <li class="nav-item dropdown language-dropdown more-dropdown">
                     <div class="dropdown  custom-dropdown-icon">
-                        <a class="dropdown-toggle btn" href="#" role="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('dashboard/img/ca.png')}}" class="flag-width" alt="flag"><span>English</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-
+                        <a class="dropdown-toggle btn" href="#" role="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>{{ LaravelLocalization::getCurrentLocaleName() }}</span> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
-                            <a class="dropdown-item" data-img-value="de" data-value="German" href="javascript:void(0);"><img src="{{asset('dashboard/img/de.png')}}" class="flag-width" alt="flag"> German</a>
-                            <a class="dropdown-item" data-img-value="jp" data-value="Japanese" href="javascript:void(0);"><img src="{{asset('dashboard/img/jp.png')}}" class="flag-width" alt="flag"> Japanese</a>
-                            <a class="dropdown-item" data-img-value="fr" data-value="French" href="javascript:void(0);"><img src="{{asset('dashboard/img/fr.png')}}" class="flag-width" alt="flag"> French</a>
-                            <a class="dropdown-item" data-img-value="ca" data-value="English" href="javascript:void(0);"><img src="{{asset('dashboard/img/ca.png')}}" class="flag-width" alt="flag"> English</a>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                        @endforeach
                         </div>
                     </div>
                 </li>
@@ -209,7 +213,7 @@
                     <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
                         <div class="user-profile-section">
                             <div class="media mx-auto">
-                                <img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar">
+                                <img src="{{asset('dashboard/img/90x90.jpg')}}" class="img-fluid mr-2" alt="avatar">
                                 <div class="media-body">
                                     <h5>Sonia Shaw</h5>
                                     <p>Project Leader</p>

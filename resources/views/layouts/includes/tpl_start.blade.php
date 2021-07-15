@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>CORK Admin Template - Analytics Dashboard</title>
+    <title>ORK Admin Template - Analytics Dashboard</title>
     <link rel="icon" type="image/x-icon" href="{{asset('dashboard/img/favicon.ico')}}"/>
     <link href="{{asset('dashboard/css/loader.css')}}" rel="stylesheet" type="text/css" />
     <script src="{{asset('dashboard/js/loader.js')}}"></script>
@@ -16,11 +16,12 @@
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link href="{{asset('dashboard/plugins/apex/apexcharts.css')}}" rel="stylesheet" type="text/css">
-    {{--@if (app()->getLocale() == 'ar')--}}
+    @if (App::getLocale() == 'ar')
         <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
-        <link href="{{asset('dashboard/css/dashboard/dash_2.css')}}" rel="stylesheet" type="text/css" />
-    {{--@else--}}
-        <!--<link href="{{asset('dashboard/ltr/css/dashboard/dash_2.css')}}" rel="stylesheet" type="text/css" />-->
+        <link href="{{URL::asset('dashboard/css/dashboard/dash_2.css')}}" rel="stylesheet" type="text/css" />
+    @else
+        <link href="{{URL::asset('dashboard/ltr/css/dashboard/dash_2.css')}}" rel="stylesheet" type="text/css" />-->
+    @endif
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>

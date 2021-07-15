@@ -79,7 +79,7 @@ return [
     |
     */
 
-    'locale' => 'ar',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -92,7 +92,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'ar',
+    'fallback_locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -164,6 +164,7 @@ return [
         /*
          * Package Service Providers...
          */
+        App\Providers\RepositoryServicesProvider::class,
 
         /*
          * Application Service Providers...

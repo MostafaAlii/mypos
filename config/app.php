@@ -164,7 +164,7 @@ return [
         /*
          * Package Service Providers...
          */
-        //App\Providers\RepositoryServicesProvider::class,
+        App\Providers\RepositoryServicesProvider::class,
 
         /*
          * Application Service Providers...

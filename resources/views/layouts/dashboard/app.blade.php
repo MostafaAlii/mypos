@@ -1,0 +1,7 @@
+@include('layouts.includes.tpl_start')
+@include('layouts.includes.navbar')
+@include('layouts.includes.sidebar')
+@include('layouts.includes.partials._session')
+@yield('content')
+@include('layouts.includes.footer')
+@include('layouts.includes.tpl_end')

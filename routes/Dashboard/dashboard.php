@@ -2,7 +2,7 @@
 
 Route::name('dashboard.')->group(function() {
     Route::get('/test', function(){
-        return 'welcome to dashboard';
+        return view('dashboard.index');
     });
 });
 // end of dashboard routes

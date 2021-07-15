@@ -25,8 +25,8 @@
     color: #4361ee;
     border: 1px solid #e0e6ed; }
 
-.custom-progress.top-left .range-count, .custom-progress.bottom-right .range-count {
-  text-align: left; }
+.custom-progress.top-right .range-count, .custom-progress.bottom-right .range-count {
+  text-align: right; }
 
 .progress-range-counter::-webkit-slider-thumb {
   -webkit-appearance: none;

@@ -41,7 +41,7 @@ $('.widget-content .custom-width-padding-background').on('click', function () {
     width: 600,
     padding: "7em",
     customClass: "background-modal",
-    background: '#fff url(assets/img/640x426.jpg) no-repeat 100% 100%',
+    background: '#fff url(assets/img/600x300.jpg) no-repeat 100% 100%',
   })
 })
 

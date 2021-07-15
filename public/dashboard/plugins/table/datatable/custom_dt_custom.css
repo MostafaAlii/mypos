@@ -14,8 +14,8 @@
   border-radius: 6px; }
 
 .table-hover:not(.table-dark) tbody tr td:first-child {
-  border-right: none !important;
-  border-right: none !important; }
+  border-left: none !important;
+  border-left: none !important; }
 
 .table-hover:not(.table-dark) tbody tr:hover .new-control.new-checkbox .new-control-indicator {
   border: 1px solid #4361ee; }

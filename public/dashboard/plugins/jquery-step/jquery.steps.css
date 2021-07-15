@@ -31,7 +31,7 @@
 /* Accessibility */
 .wizard > .steps .current-info, .tabcontrol > .steps .current-info, .wizard > .content > .title, .tabcontrol > .content > .title {
   position: absolute;
-  right: -999em; }
+  left: -999em; }
 
 /*
     Wizard
@@ -43,7 +43,7 @@
 
 .wizard.vertical > .steps {
   display: inline;
-  float: right;
+  float: left;
   width: 30%; }
 
 .wizard.vertical > .steps > ul > li {
@@ -52,7 +52,7 @@
 
 .wizard.vertical > .content {
   display: inline;
-  float: right;
+  float: left;
   margin: 0 2.5% 0.5em 2.5%;
   width: 65%; }
 
@@ -62,16 +62,16 @@
   max-width: 100%; }
 
 .wizard.vertical > .actions > ul > li {
-  margin: 0 1em 0 0; }
+  margin: 0 0 0 1em; }
 
 .wizard > .steps .number {
   font-size: 1.429em; }
 
 .wizard > .steps > ul > li {
-  float: right; }
+  float: left; }
 
 .wizard > .actions > ul > li {
-  float: right; }
+  float: left; }
 
 .wizard > .steps a {
   display: block;
@@ -158,7 +158,7 @@
   .wizard > .content > .body label.error {
     color: #8a1f11;
     display: inline-block;
-    margin-right: 1.5em; }
+    margin-left: 1.5em; }
 
 .wizard > .actions {
   margin-top: 30px;
@@ -166,7 +166,7 @@
 
 .wizard > .actions > ul {
   display: inline-block;
-  text-align: left; }
+  text-align: right; }
   .wizard > .actions > ul > li {
     margin: 0 0.5em; }
 
@@ -209,15 +209,15 @@
     top: 1px;
     z-index: 1; }
     .tabcontrol > .steps > ul > li {
-      float: right;
-      margin: 5px 0 0 2px;
+      float: left;
+      margin: 5px 2px 0 0;
       padding: 1px;
-      -webkit-border-top-right-radius: 5px;
       -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
       -moz-border-radius-topleft: 5px;
       -moz-border-radius-topright: 5px;
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px; }
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
       .tabcontrol > .steps > ul > li:hover {
         background: #edecec;
         border: 1px solid #bbb;
@@ -249,7 +249,7 @@
   border-top: 1px solid #bbb;
   padding-top: 20px; }
   .tabcontrol > .content > .body {
-    float: right;
+    float: left;
     position: absolute;
     width: 95%;
     height: 95%;
@@ -334,8 +334,8 @@
   align-items: center;
   width: 50px;
   height: 50px;
-  margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .circle.wizard > .steps .current a {
   background: transparent;
@@ -356,10 +356,10 @@
   top: 35px;
   width: 235%;
   height: 3px;
-  left: 0;
   right: 0;
-  margin-right: auto;
+  left: 0;
   margin-left: auto;
+  margin-right: auto;
   background-color: #f1f2f3; }
 
 .circle.wizard > .content {
@@ -443,13 +443,13 @@
   border-bottom: 2px solid #f1f2f3;
   font-size: 15px;
   font-weight: 600;
-  margin-left: 6px;
+  margin-right: 6px;
   border-radius: 20px; }
   .pill.wizard > .steps a:hover, .pill.wizard > .steps a:active {
     border-bottom: 2px solid #f1f2f3;
     font-size: 15px;
     font-weight: 600;
-    margin-left: 6px;
+    margin-right: 6px;
     border-radius: 20px; }
 
 .pill.wizard > .content {
@@ -516,8 +516,8 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    margin-right: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-right: auto; }
   .circle.vertical.wizard > .steps .current a {
     background: transparent;
     color: #3b3f5c;
@@ -536,10 +536,10 @@
     top: 0;
     width: 3px;
     height: 110%;
-    left: 0;
     right: 0;
-    margin-right: auto;
+    left: 0;
     margin-left: auto;
+    margin-right: auto;
     background-color: #f1f2f3; }
   .circle.vertical.wizard > .content {
     -ms-flex: 0 0 50%;
@@ -609,12 +609,12 @@
     opacity: .5; }
   .pills.vertical.wizard > .steps a {
     font-weight: 600;
-    margin-left: 6px;
+    margin-right: 6px;
     border-radius: 20px;
     margin-bottom: 25px; }
     .pills.vertical.wizard > .steps a:hover, .pills.vertical.wizard > .steps a:active {
       font-weight: 600;
-      margin-left: 6px;
+      margin-right: 6px;
       border-radius: 20px;
       margin-bottom: 25px; }
   .pills.vertical.wizard > .steps .disabled a {
@@ -629,12 +629,12 @@
     cursor: default;
     text-align: center;
     border-radius: 30px;
-    margin-left: 5px; }
+    margin-right: 5px; }
     .pills.vertical.wizard > .steps .current a:hover, .pills.vertical.wizard > .steps .current a:active {
       cursor: default;
       text-align: center;
       border-radius: 30px;
-      margin-left: 5px; }
+      margin-right: 5px; }
   .pills.vertical.wizard > .content {
     -ms-flex: 0 0 50%;
     flex: 0 0 70%;
@@ -663,7 +663,7 @@
 
 /*For Validation Checkbox */
 label.custom-control-label {
-  margin-right: 30px; }
+  margin-left: 30px; }
 
 @media (max-width: 575px) {
   .pill.wizard ul[role="tablist"] {

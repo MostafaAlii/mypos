@@ -124,8 +124,6 @@
 
 .apexcharts-tooltip-series-group.active .apexcharts-tooltip-marker {
   opacity: 1;
-  margin-left: 10px;
-  margin-right: 0;
 }
 .apexcharts-tooltip-series-group.active, .apexcharts-tooltip-series-group:last-child {
   padding-bottom: 4px;

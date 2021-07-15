@@ -11,8 +11,8 @@
 .flatpickr-calendar {
   width: 336.875px;
   padding: 15px;
-  -webkit-box-shadow: -2px 5px 17px 0 rgba(31, 45, 61, 0.1);
-  box-shadow: -2px 5px 17px 0 rgba(31, 45, 61, 0.1);
+  -webkit-box-shadow: 2px 5px 17px 0 rgba(31, 45, 61, 0.1);
+  box-shadow: 2px 5px 17px 0 rgba(31, 45, 61, 0.1);
   border: 1px solid #bfc9d4; }
   .flatpickr-calendar.open {
     display: inline-block;
@@ -51,7 +51,7 @@
 .flatpickr-current-month input.cur-year {
   height: auto;
   border: 1px solid #bfc9d4;
-  border-right: none;
+  border-left: none;
   color: #3b3f5c;
   font-size: 15px;
   padding: 13px 12px;

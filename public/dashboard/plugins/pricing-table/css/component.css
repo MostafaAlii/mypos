@@ -26,7 +26,7 @@
   flex: 0 1 315px; }
 
 .pricing__feature-list {
-  text-align: right; }
+  text-align: left; }
 
 .pricing__action {
   color: inherit;
@@ -42,7 +42,7 @@
 */
 .switch.s-outline[class*="s-outline-"] .slider:before {
   bottom: 1px;
-  right: 1px;
+  left: 1px;
   border: 2px solid #bfc9d4;
   background-color: #bfc9d4; }
 
@@ -51,7 +51,7 @@
 
 .switch.s-icons.s-outline-primary {
   color: #4361ee;
-  margin: 0 11px 0 3px; }
+  margin: 0 3px 0 11px; }
 
 .switch.s-icons .slider:before {
   content: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%231b55e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') !important; }
@@ -64,11 +64,11 @@
   margin: 0 auto;
   text-align: center; }
   .billing-cycle-radios.text-align-left {
-    text-align: right; }
+    text-align: left; }
   .billing-cycle-radios .radio {
-    margin-left: 20px; }
+    margin-right: 20px; }
     .billing-cycle-radios .radio:last-child {
-      margin-left: 0; }
+      margin-right: 0; }
 
 .pricing-plans-container {
   border-radius: 4px;
@@ -84,13 +84,13 @@
   .pricing-plan:hover {
     box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2); }
   .pricing-plan:first-of-type {
-    border-left: none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px; }
-  .pricing-plan:last-of-type {
     border-right: none;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px; }
+  .pricing-plan:last-of-type {
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px; }
   .pricing-plan h3 {
     font-size: 20px;
     font-weight: 600;
@@ -123,7 +123,7 @@
     font-size: 32px;
     font-weight: 600;
     color: #3b3f5c;
-    margin-left: 5px;
+    margin-right: 5px;
     line-height: 30px; }
 
 .pricing-plan-features strong {
@@ -191,7 +191,7 @@
   width: 100%;
   height: 59px;
   top: -45px;
-  right: 0;
+  left: 0;
   text-align: center;
   border-radius: 4px 4px 0 0;
   font-weight: 600;
@@ -212,10 +212,10 @@
 
 @media (max-width: 767px) {
   .pricing-plan:first-of-type {
-    border-left: 1px solid #e0e6ed;
+    border-right: 1px solid #e0e6ed;
     border-radius: 6px; }
   .pricing-plan:last-of-type {
-    border-right: 1px solid #e0e6ed;
+    border-left: 1px solid #e0e6ed;
     border-radius: 6px; } }
 
 /* 
@@ -306,7 +306,7 @@
     width: 20%;
     height: 1px;
     background: #3b3f5c;
-    right: 40%;
+    left: 40%;
     bottom: 0; }
 
 .pricing--norbu .pricing__item:hover .pricing__title::after {
@@ -404,7 +404,7 @@
     width: 20%;
     height: 1px;
     background: #3b3f5c;
-    right: 40%;
+    left: 40%;
     bottom: 0; }
 
 .pricing--norbu .pricing__item:hover .pricing__title::after {

@@ -373,10 +373,10 @@
             maxLengthIndicator.css({ top: pos.top - actualHeight, left: pos.left + inputOuter });
             break;
           case 'top-left':
-            maxLengthIndicator.css({ top: pos.top - actualHeight, left: pos.left - outerWidth });
+            maxLengthIndicator.css({ top: pos.top - actualHeight, left: pos.left - actualWidth });
             break;
           case 'bottom-left':
-            maxLengthIndicator.css({ top: pos.top + currentInput.outerHeight(), left: pos.left - outerWidth });
+            maxLengthIndicator.css({ top: pos.top + currentInput.outerHeight(), left: pos.left - actualWidth });
             break;
           case 'centered-right':
             maxLengthIndicator.css({ top: pos.top + (actualHeight / 2), left: pos.left + inputOuter - outerWidth - 3 });

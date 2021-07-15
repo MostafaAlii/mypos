@@ -29,9 +29,7 @@
   background: #fff;
   box-shadow: none;
   border: 1px solid #e0e6ed;
-  box-shadow: 0px 3px 11px 0px rgba(31, 45, 61, 0.1);
-  right: auto !important;
-  z-index: 1036; }
+  box-shadow: 0px 3px 11px 0px rgba(31, 45, 61, 0.1); }
 
 .popover-primary .arrow:after, .popover-primary .arrow:before {
   display: none;
@@ -42,8 +40,8 @@
   border-color: #eaf1ff;
   color: #fff;
   padding: 11px 18px;
-  border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 400; }
@@ -78,7 +76,7 @@
     padding: 0;
     background: #000;
     border-radius: 2px;
-    right: 0px;
+    left: 0px;
     top: 5px;
     height: 10px;
     width: 10px; }
@@ -183,14 +181,14 @@ a.bg-primary:hover, a.bg-success:hover, a.bg-warning:hover, a.bg-danger:hover {
       margin-bottom: 5px;
       font-size: 14px;
       font-weight: 600;
-      color: #888ea8; }
+      color: #e3e4eb; }
     #addEventsModal form .event-badge {
       margin-top: 16px; }
       #addEventsModal form .event-badge p {
         margin-bottom: 10px;
         font-size: 14px;
         font-weight: 600;
-        color: #888ea8; }
+        color: #e3e4eb; }
     #addEventsModal form input {
       margin-bottom: 25px; }
     #addEventsModal form .form-group {
@@ -248,7 +246,7 @@ td.fc-today.fc-state-highlight span {
   background: #000;
   width: 5px;
   position: absolute;
-  right: -9px;
+  left: -9px;
   top: 4px;
   border-radius: 50%; }
 

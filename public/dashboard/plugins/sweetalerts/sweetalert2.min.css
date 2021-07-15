@@ -410,7 +410,7 @@ body.swal2-no-backdrop > .swal2-shown {
   .swal2-popup.swal2-loading {
     overflow-y: hidden; }
   .swal2-popup .swal2-title {
-    color: #fafafa;
+    color: #595959;
     font-size: 30px;
     text-align: center;
     font-weight: 600;

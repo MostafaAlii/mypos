@@ -43,8 +43,8 @@
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 5;
   height: auto;
   overflow: hidden;
@@ -64,7 +64,7 @@
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 6;
   display: block;
   height: auto;
@@ -72,7 +72,7 @@
   line-height: 1.25;
   background-color: rgba(27, 85, 226, 0.239216);
   color: #4361ee;
-  border-right: 1px solid #e0e6ed;
+  border-left: 1px solid #e0e6ed;
   box-sizing: border-box; }
 
 .custom-file-container__image-preview {
@@ -98,14 +98,14 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  float: right;
+  float: left;
   margin: 1.858736%;
   width: 29.615861214%;
   height: 90px;
   box-shadow: 0 4px 10px 0 rgba(51, 51, 51, 0.25); }
 
 .custom-file-container__image-multi-preview__single-image-clear {
-  right: -6px;
+  left: -6px;
   background: #ffffff;
   position: absolute;
   width: 20px;

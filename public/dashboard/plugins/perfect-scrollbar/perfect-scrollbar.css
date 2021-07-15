@@ -8,9 +8,6 @@
 			@Import	Mixins
 	===============================
 */
-body .ps__rail-y {
-  right: 1px !important; }
-
 /*
  * Container style
  */
@@ -42,7 +39,7 @@ body .ps__rail-y {
   -webkit-transition: background-color .2s linear, opacity .2s linear;
   width: 10px;
   /* there must be 'right' or 'left' for ps__rail-y */
-  left: 0;
+  right: 0;
   /* please don't change 'position' */
   position: absolute; }
 
@@ -84,7 +81,7 @@ body .ps__rail-y {
   -webkit-transition: background-color .2s linear, width .2s ease-in-out;
   width: 4px;
   /* there must be 'right' for ps__thumb-y */
-  left: 2px;
+  right: 2px;
   /* please don't change 'position' */
   position: absolute; }
 

@@ -11,6 +11,7 @@ var sline = {
       show: false,
     }
   },
+  // colors: ['#4361ee'],
   dataLabels: {
     enabled: false
   },
@@ -23,8 +24,7 @@ var sline = {
   }],
   title: {
     text: 'Product Trends by Month',
-    align: 'right',
-    offsetX: -95,
+    align: 'left'
   },
   grid: {
     row: {
@@ -34,11 +34,6 @@ var sline = {
   },
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-  },
-  yaxis: {
-    labels: {
-      offsetX: -20,
-    }
   }
 }
 
@@ -60,6 +55,7 @@ var sLineArea = {
           show: false,
         }
     },
+    // colors: ['#4361ee', '#888ea8'],
     dataLabels: {
         enabled: false
     },
@@ -77,11 +73,6 @@ var sLineArea = {
     xaxis: {
         type: 'datetime',
         categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],                
-    },
-    yaxis: {
-        labels: {
-          offsetX: -20,
-        }
     },
     tooltip: {
         x: {
@@ -114,6 +105,7 @@ var sCol = {
             endingShape: 'rounded'  
         },
     },
+    // colors: ['#888ea8', '#4361ee'],
     dataLabels: {
         enabled: false
     },
@@ -134,11 +126,7 @@ var sCol = {
     },
     yaxis: {
         title: {
-            text: '$ (thousands)',
-            offsetX: -95,
-        },
-        labels: {
-          offsetX: -20,
+            text: '$ (thousands)'
         }
     },
     fill: {
@@ -173,6 +161,7 @@ var sColStacked = {
           show: false,
         }
     },
+    // colors: ['#4361ee', '#888ea8', '#e3e4eb', '#d3d3d3'],
     responsive: [{
         breakpoint: 480,
         options: {
@@ -205,11 +194,6 @@ var sColStacked = {
         type: 'datetime',
         categories: ['01/01/2011 GMT', '01/02/2011 GMT', '01/03/2011 GMT', '01/04/2011 GMT', '01/05/2011 GMT', '01/06/2011 GMT'],
     },
-      yaxis: {
-        labels: {
-          offsetX: -20,
-        }
-      },
     legend: {
         position: 'right',
         offsetY: 40
@@ -236,6 +220,7 @@ var sBar = {
           show: false,
         }
     },
+    // colors: ['#4361ee'],
     plotOptions: {
         bar: {
             horizontal: true,
@@ -249,12 +234,7 @@ var sBar = {
     }],
     xaxis: {
         categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
-    },
-    yaxis: {
-        labels: {
-          offsetX: -66,
-        }
-    },
+    }
 }
 
 var chart = new ApexCharts(
@@ -275,6 +255,7 @@ var options = {
       show: false,
     }
   },
+  // colors: ['#4361ee', '#888ea8'],
   series: [{
     name: 'Website Blog',
     type: 'column',
@@ -288,9 +269,7 @@ var options = {
     width: [0, 4]
   },
   title: {
-    text: 'Traffic Sources',
-    align: 'right',
-    offsetX: -95,
+    text: 'Traffic Sources'
   },
   labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
   xaxis: {
@@ -299,15 +278,7 @@ var options = {
   yaxis: [{
     title: {
       text: 'Website Blog',
-      offsetX: -60,
-      offsetY: 0,
-      style: {
-         color: '#191e3a',
-      }
     },
-    labels: {
-      offsetX: -20,
-    }
 
   }, {
     opposite: true,
@@ -337,6 +308,7 @@ var donutChart = {
           show: false,
         }
     },
+    // colors: ['#4361ee', '#888ea8', '#e3e4eb', '#d3d3d3'],
     series: [44, 55, 41, 17],
     responsive: [{
         breakpoint: 480,
@@ -369,6 +341,7 @@ var radialChart = {
           show: false,
         }
     },
+    // colors: ['#4361ee', '#888ea8', '#e3e4eb', '#d3d3d3'],
     plotOptions: {
         radialBar: {
             dataLabels: {

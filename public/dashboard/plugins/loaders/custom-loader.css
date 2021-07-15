@@ -21,8 +21,8 @@
     border-bottom: 7px solid #4361ee; }
   .loader.multi-loader {
     border-bottom: 7px solid #e2a03f;
-    border-left: 7px solid #1abc9c;
-    border-right: 7px solid #e7515a; }
+    border-right: 7px solid #1abc9c;
+    border-left: 7px solid #e7515a; }
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -55,7 +55,7 @@
   overflow: hidden;
   text-indent: -999em;
   border: .25em solid;
-  border-color: currentColor currentColor currentColor transparent;
+  border-color: currentColor transparent currentColor currentColor;
   border-radius: 50%;
   -webkit-animation-name: spinner-border;
   animation-name: spinner-border;
@@ -67,13 +67,13 @@
   animation-iteration-count: infinite; }
 
 .spinner-border-reverse {
-  border-color: transparent transparent transparent currentColor; }
+  border-color: transparent currentColor transparent transparent; }
   .spinner-border-reverse::after {
     position: absolute;
     top: -.25em;
-    left: -.25em;
-    bottom: -.25em;
     right: -.25em;
+    bottom: -.25em;
+    left: -.25em;
     display: inline-block;
     content: "";
     border: 0.25em solid rgba(0, 0, 0, 0.1);

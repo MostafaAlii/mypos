@@ -31,8 +31,8 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
   margin-left: .2em;
+  margin-right: .2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
@@ -46,8 +46,8 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
   margin-left: .2em;
+  margin-right: .2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
@@ -61,8 +61,8 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
   margin-left: .2em;
+  margin-right: .2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
@@ -126,9 +126,9 @@
   .dropify-wrapper input {
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -154,7 +154,7 @@
     opacity: 0;
     z-index: 7;
     top: 10px;
-    left: 10px;
+    right: 10px;
     background: 0 0;
     border: 2px solid #fff;
     text-transform: uppercase;
@@ -175,9 +175,9 @@
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
     overflow: hidden;
     text-align: center; }
     .dropify-wrapper .dropify-preview .dropify-render img {
@@ -193,17 +193,17 @@
     .dropify-wrapper .dropify-preview .dropify-render i {
       font-size: 70px;
       top: 50%;
-      right: 50%;
-      -webkit-transform: translate(50%, -50%);
-      transform: translate(50%, -50%);
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       position: absolute;
       color: #777; }
     .dropify-wrapper .dropify-preview .dropify-render .dropify-extension {
       position: absolute;
       top: 50%;
-      right: 50%;
-      -webkit-transform: translate(50%, -50%);
-      transform: translate(50%, -50%);
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       margin-top: 10px;
       text-transform: uppercase;
       font-weight: 900;
@@ -215,9 +215,9 @@
       text-overflow: ellipsis; }
     .dropify-wrapper .dropify-preview .dropify-infos {
       position: absolute;
-      right: 0;
-      top: 0;
       left: 0;
+      top: 0;
+      right: 0;
       bottom: 0;
       z-index: 3;
       background: rgba(0, 0, 0, 0.7);
@@ -248,7 +248,7 @@
           line-height: 25px;
           font-weight: 700; }
           .dropify-wrapper .dropify-preview .dropify-infos .dropify-infos-inner p.dropify-filename span.file-icon {
-            margin-left: 2px; }
+            margin-right: 2px; }
           .dropify-wrapper .dropify-preview .dropify-infos .dropify-infos-inner p.dropify-infos-message {
             margin-top: 15px;
             padding-top: 15px;
@@ -259,9 +259,9 @@
               content: '';
               position: absolute;
               top: 0;
-              right: 50%;
-              -webkit-transform: translate(50%, 0);
-              transform: translate(50%, 0);
+              left: 50%;
+              -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
               background: #fff;
               width: 30px;
               height: 2px; }
@@ -292,7 +292,7 @@
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
       top: 0;
-      right: 0; }
+      left: 0; }
       .dropify-wrapper.touch-fallback .dropify-preview .dropify-render .dropify-font-file::before {
         margin-top: 30px;
         margin-bottom: 30px; }
@@ -309,7 +309,7 @@
         top: 0;
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
-        padding: 5px 0 5px 90px; }
+        padding: 5px 90px 5px 0; }
         .dropify-wrapper.touch-fallback .dropify-preview .dropify-infos .dropify-infos-inner p {
           padding: 0;
           margin: 0;
@@ -319,7 +319,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
           color: #777;
-          text-align: right;
+          text-align: left;
           line-height: 25px; }
           .dropify-wrapper.touch-fallback .dropify-preview .dropify-infos .dropify-infos-inner p.dropify-filename {
             font-weight: 700; }
@@ -344,7 +344,7 @@
   .dropify-wrapper .dropify-loader {
     position: absolute;
     top: 15px;
-    left: 15px;
+    right: 15px;
     display: none;
     z-index: 9; }
     .dropify-wrapper .dropify-loader::after {
@@ -357,18 +357,18 @@
       border-radius: 100%;
       border-top: 1px solid #CCC;
       border-bottom: 1px solid #777;
-      border-right: 1px solid #CCC;
-      border-left: 1px solid #777;
+      border-left: 1px solid #CCC;
+      border-right: 1px solid #777;
       content: ''; }
   .dropify-wrapper .dropify-errors-container {
     position: absolute;
-    right: 0;
-    top: 0;
     left: 0;
+    top: 0;
+    right: 0;
     bottom: 0;
     z-index: 3;
     background: rgba(243, 65, 65, 0.8);
-    text-align: right;
+    text-align: left;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: visibility 0s linear .15s,opacity .15s linear;
@@ -377,12 +377,12 @@
       padding: 10px 20px;
       margin: 0;
       position: absolute;
-      right: 0;
+      left: 0;
       top: 50%;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
       .dropify-wrapper .dropify-errors-container ul li {
-        margin-right: 20px;
+        margin-left: 20px;
         color: #fff;
         font-weight: 700; }
     .dropify-wrapper .dropify-errors-container.visible {
@@ -394,7 +394,7 @@
     padding: 0;
     margin: 15px 0; }
     .dropify-wrapper ~ .dropify-errors-container ul li {
-      margin-right: 20px;
+      margin-left: 20px;
       color: #F34141;
       font-weight: 700; }
 

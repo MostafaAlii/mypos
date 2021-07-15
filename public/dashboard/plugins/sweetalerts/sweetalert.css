@@ -172,16 +172,16 @@ body.swal2-iosfix {
   margin: 20px auto; }
 
 .swal2-modal .swal2-input, .swal2-modal .swal2-file, .swal2-modal .swal2-textarea {
-  height: auto;
-  font-size: 15px;
-  padding: 8px 10px;
-  letter-spacing: 1px;
-  height: calc(1.4em + 1.4rem + 2px);
-  padding: .75rem 1.25rem;
-  border-radius: 6px; }
-
-pre {
-  color: #009688; }
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ebedf2;
+  -webkit-box-shadow: inset 0px 3px 25px 0px rgba(113, 106, 202, 0.1);
+  box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.1);
+  -webkit-transition: border-color box-shadow .3s;
+  transition: border-color box-shadow .3s; }
 
 .swal2-modal .swal2-input.swal2-inputerror, .swal2-modal .swal2-file.swal2-inputerror, .swal2-modal .swal2-textarea.swal2-inputerror {
   border-color: #e7515a !important;
@@ -363,7 +363,7 @@ pre {
     text-align: center; }
   .swal2-icon.swal2-info {
     font-family: 'Open Sans', sans-serif;
-    color: #1b55e2 !important;
+    color: #4361ee !important;
     border: 5px solid #f1f2f3 !important;
     box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
     font-size: 60px;
@@ -371,11 +371,11 @@ pre {
     text-align: center; }
   .swal2-icon.swal2-question {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #5c1ac3 !important;
-    border: 5px solid #f1f2f3 !important;
-    box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
+    color: #805dca !important;
+    border: solid 5px #ebedf2 !important;
     border-color: none !important;
-    text-align: center; }
+    text-align: center;
+    box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2); }
   .swal2-icon:not(.swal2-animate-error-icon):not(.swal2-animate-success-icon) {
     width: 2em !important;
     line-height: 119px !important;
@@ -462,7 +462,7 @@ pre {
     display: inline-block;
     position: relative; }
   .swal2-progresssteps .swal2-progresscircle {
-    background: #1b55e2;
+    background: #4361ee;
     border-radius: 2em;
     color: #fff;
     height: 2em;
@@ -479,7 +479,7 @@ pre {
       .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle, .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
         background: #ebedf2 !important; }
   .swal2-progresssteps .swal2-progressline {
-    background: #1b55e2;
+    background: #4361ee;
     height: .4em;
     margin: 0 -1px;
     z-index: 10; }

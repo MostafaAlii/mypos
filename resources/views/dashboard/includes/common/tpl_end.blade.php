@@ -1,4 +1,5 @@
 <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{asset('dashboard/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
     <script src="{{asset('dashboard/bootstrap/js/popper.min.js')}}"></script>
     <script src="{{asset('dashboard/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -10,6 +11,7 @@
         });
     </script>
     <script src="{{asset('dashboard/assets/js/custom.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/highlight/highlight.pack.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->

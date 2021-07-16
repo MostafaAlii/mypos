@@ -10,6 +10,7 @@
     <script src="{{asset('dashboard/assets/js/loader.js')}}"></script>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha512-NXUhxhkDgZYOMjaIgd89zF2w51Mub53Ru3zCNp5LTlEzMbNNAjTjDbpURYGS5Mop2cU4b7re1nOIucsVlrx9fA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{asset('dashboard/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
@@ -24,6 +25,10 @@
     <link href="{{asset('dashboard/css/forms/theme-checkbox-radio.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/plugins/table/datatable/dt-global_style.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/plugins/table/datatable/custom_dt_custom.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/assets/css/elements/alert.css')}}" rel="stylesheet" type="text/css" />
+    <style>
+        .btn-light { border-color: transparent; }
+    </style>
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>

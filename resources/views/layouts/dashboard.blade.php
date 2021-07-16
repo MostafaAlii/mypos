@@ -11,6 +11,7 @@
         <!--  BEGIN CONTENT AREA  -->
         <div id="content" class="main-content">
             @yield('content')
+            @include('dashboard.includes.alerts._session')
             @include('dashboard.includes.common.footer')
         </div>
         <!--  END CONTENT AREA  -->

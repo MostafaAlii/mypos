@@ -23,21 +23,27 @@
         </ol>
     </nav>
     <!-- End BreadCrumbs -->
+    
     <!-- Start User Datatable -->
     <div class="row layout-top-spacing layout-spacing">
         <div class="col-lg-12">
             <div class="statbox widget box box-shadow">
                 <div class="widget-content widget-content-area">
+                    <!-- Start Btn -->
+                    <a href="{{route('user.create')}}" class="btn btn-primary rounded bs-popover mb-3">
+                        <img src="https://img.icons8.com/ultraviolet/32/000000/plus.png"/>
+                        {{ trans('users.add_member')}}
+                    </a>
+                    <!-- End Btn -->
+                    <!-- Start Table -->
                     <table id="style-2" class="table style-2  table-hover">
                         <thead>
                             <tr>
                                 <th class="checkbox-column dt-no-sorting"> Record Id </th>
-                                <th>{{ trans('users.full_name') }}</th>
                                 <th>{{ trans('users.first_name') }}</th>
                                 <th>{{ trans('users.last_name') }}</th>
                                 <th class="text-center">{{ trans('users.image') }}</th>
                                 <th>{{ trans('users.email') }}</th>
-                                <th>{{ trans('users.phone') }}</th>
                                 <th class="text-center dt-no-sorting">{{ trans('users.action') }}</th>
                             </tr>
                         </thead>
@@ -45,7 +51,6 @@
                             @foreach($users as $index=>$user)
                             <tr>
                                 <td class="checkbox-column">{{ $index + 1 }}</td>
-                                <td>{{ $user->full_name }}</td>
                                 <td>{{ $user->first_name }}</td>
                                 <td>{{ $user->last_name }}</td>
                                 <td class="text-center">
@@ -54,7 +59,6 @@
                                     </span>
                                 </td>
                                 <td>{{ $user->email }}</td>
-                                <td>111-666-1111</td>
                                 <td class="text-center">
                                     <!-- Start Edit Btn -->
                                     <a href="{{route('user.edit', $user->id)}}" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
@@ -76,6 +80,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <!-- End Table -->
                 </div>
             </div>
         </div>

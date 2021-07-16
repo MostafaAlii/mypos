@@ -9,6 +9,7 @@ Route::group([
         // Users and Member
         Route::get('/users', 'UserController@index')->name('user.index');
         Route::get('/users/create', 'UserController@create')->name('user.create');
+        Route::post('/users/store', 'UserController@store')->name('user.store');
         Route::get('/users/edit', 'UserController@edit')->name('user.edit');
         Route::get('/users/delete', 'UserController@delete')->name('user.delete');
     });

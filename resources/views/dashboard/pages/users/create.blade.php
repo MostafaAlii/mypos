@@ -28,21 +28,46 @@
         </ol>
     </nav>
     <!-- End BreadCrumbs -->
+    <br>
+    @include('dashboard.includes.alerts._errors')
     <!-- Start Create New User Form -->
-    <form>
+    <form action="{{ route('user.store') }}" method="post">
+        @csrf
         <!-- Start Email & Password -->
         <div class="form-row mb-4">
             <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <label>{{trans('users.first_name')}}</label>
+                <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}" placeholder="{{trans('users.enter_first_name')}}">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <label>{{trans('users.last_name')}}</label>
+                <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}" placeholder="{{trans('users.enter_last_name')}}">
+            </div>
+        </div>
+        <!-- End First Name And Last Name -->
+        <!-- Start Email & Password -->
+        <div class="form-row mb-4">
+            <div class="form-group col-md-6">
+                <label class="control-label">{{trans('users.email')}}</label>
+                <div class="input-group"> 
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="{{trans('users.enter_your_email')}}" > 
+                </div>
+            </div>
+            <div class="form-group col-md-6"></div>
+            <div class="form-group col-md-6">
+                <label>{{trans('users.password')}}</label>
+                <input type="password" name="password" class="form-control" placeholder="{{trans('users.enter_your_password')}}">
+            </div>
+            <div class="form-group col-md-6">
+                <label>{{trans('users.password_confirmation')}}</label>
+                <input type="password" name="password_confirmation" class="form-control" placeholder="{{trans('users.enter_your_confirmation_password')}}">
             </div>
         </div>
         <!-- End Email & Password -->
-        
+        <button type="submit" class="btn btn-outline-primary btn-rounded mb-2">{{ trans('users.save') }}</button>
     </form>
     <!--End Create New User Form -->
 </div>

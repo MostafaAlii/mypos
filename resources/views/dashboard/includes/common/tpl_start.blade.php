@@ -16,6 +16,7 @@
     <link href="{{asset('dashboard/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/plugins/font-icons/fontawesome/css/regular.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/plugins/font-icons/fontawesome/css/fontawesome.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/plugins/file-upload/file-upload-with-preview.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->

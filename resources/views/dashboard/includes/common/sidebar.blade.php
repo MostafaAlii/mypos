@@ -5,7 +5,7 @@
                 <div class="profile-info">
                     <figure class="user-cover-image"></figure>
                     <div class="user-info">
-                        <img src="{{asset('dashboard/assets/img/90x90.jpg')}}" alt="avatar">
+                        <img src="{{auth()->user()->image_path}}" alt="avatar">
                         <h6 class="">{{ strtoupper(auth()->user()->first_name . ' ' . auth()->user()->last_name) }}</h6>
                         <p class="">{{-- strtoupper(auth()->user()->first_name . ' ' . $user->last_name) --}} </p>
                     </div>

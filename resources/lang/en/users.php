@@ -1,7 +1,7 @@
 <?php
 return [
     'users_page_title'               =>          'Member Area',
-    'users_in_sidebar'               =>          'Member Managment',
+    'users_in_sidebar'               =>          '- Member Managment',
     'users'                          =>          'Users',
     'members'                        =>          'Members',
     'members_and_users'              =>          'Members And Users',
@@ -12,7 +12,7 @@ return [
     'show_all'                       =>          'Show All',
     'full_name'                      =>          'Full Name',
     'enter_full_name'                =>          'Typing Your Full Name',
-    'first_name'                     =>          'First Name',
+    'first_name'                     =>          'Name',
     'enter_first_name'               =>          'Typing Your First Name',
     'last_name'                      =>          'last Name',
     'enter_last_name'                =>          'Typing Your Last Name',

@@ -12,6 +12,7 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
+                    <!-- Start Dashboard Head Title & Tab -->
                     <li class="menu active">
                         <a href="#dashboard" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                             <div class="">
@@ -28,12 +29,13 @@
                             </li>
                         </ul>
                     </li>
-
+                    <!-- End Dashboard Head Title & Tab -->
+                    <!-- Start Users Head Title -->
                     <li class="menu menu-heading">
                         <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg><span>{{trans('users.users_in_sidebar')}}</span></div>
                     </li>
-
-                    <!-- Start Users -->
+                    <!-- End Users Head Title -->
+                    <!-- Start Users Tab -->
                     <li class="menu">
                         <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
@@ -53,77 +55,40 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- End Users -->
-
-                    <!-- Start Elements -->
+                    <!-- End Users Tab -->
+                    <!-- Start Category Head Title -->
+                    <li class="menu menu-heading">
+                        <div class="heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <span>{{trans('category.category_in_sidebar')}}</span>
+                        </div>
+                    </li>
+                    <!-- End Category Head Title -->
+                    <!-- Start Category Tab -->
                     <li class="menu">
-                        <a href="#elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <a href="#categories" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                                <span>Elements</span>
+                                <i data-feather="box"></i>
+                                <span>{{trans('category.categories')}}</span>
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         </a>
-                        <ul class="collapse submenu list-unstyled" id="elements" data-parent="#accordionExample">
+                        <ul class="collapse submenu list-unstyled" id="categories" data-parent="#accordionExample">
                             <li>
-                                <a href="element_alerts.html"> Alerts </a>
+                                <a href="{{route('category.create')}}">{{trans('category.add_category')}}</a>
                             </li>
+                            @if(auth()->user()->hasPermission('categories_read'))
                             <li>
-                                <a href="element_avatar.html"> Avatar </a>
+                                <a href="{{route('category.index')}}">{{trans('category.show_all')}}</a>
                             </li>
-                            <li>
-                                <a href="element_badges.html"> Badges </a>
-                            </li>
-                            <li>
-                                <a href="element_breadcrumbs.html"> Breadcrumbs </a>
-                            </li>                            
-                            <li>
-                                <a href="element_buttons.html"> Buttons </a>
-                            </li>
-                            <li>
-                                <a href="element_buttons_group.html"> Button Groups </a>
-                            </li>
-                            <li>
-                                <a href="element_color_library.html"> Color Library </a>
-                            </li>
-                            <li>
-                                <a href="element_dropdown.html"> Dropdown </a>
-                            </li>
-                            <li>
-                                <a href="element_infobox.html"> Infobox </a>
-                            </li>
-                            <li>
-                                <a href="element_jumbotron.html"> Jumbotron </a>
-                            </li>
-                            <li>
-                                <a href="element_loader.html"> Loader </a>
-                            </li>
-                            <li>
-                                <a href="element_pagination.html"> Pagination </a>
-                            </li>
-                            <li>
-                                <a href="element_popovers.html"> Popovers </a>
-                            </li>
-                            <li>
-                                <a href="element_progress_bar.html"> Progress Bar </a>
-                            </li>
-                            <li>
-                                <a href="element_search.html"> Search </a>
-                            </li>
-                            <li>
-                                <a href="element_tooltips.html"> Tooltips </a>
-                            </li>
-                            <li>
-                                <a href="element_treeview.html"> Treeview </a>
-                            </li>
-                            <li>
-                                <a href="element_typography.html"> Typography </a>
-                            </li>
+                            @endif
                         </ul>
                     </li>
-                    <!-- End Elements -->
+                    <!-- End Category Tab -->
                 </ul>
                 
             </nav>

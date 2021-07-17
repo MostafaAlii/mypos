@@ -18,8 +18,11 @@
     <script src="{{asset('dashboard/plugins/apex/apexcharts.min.js')}}"></script>
     <script src="{{asset('dashboard/assets/js/dashboard/dash_1.js')}}"></script>
     <script src="{{asset('dashboard/plugins/table/datatable/datatables.js')}}"></script>
+    <script src="{{asset('dashboard/assets/js/scrollspyNav.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/font-icons/feather/feather.min.js')}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script>
+        feather.replace();
         c2 = $('#style-2').DataTable({
             headerCallback:function(e, a, t, n, s) {
                 e.getElementsByTagName("th")[0].innerHTML='<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'

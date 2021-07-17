@@ -10,11 +10,11 @@
         @include('dashboard.includes.common.sidebar')
         <!--  BEGIN CONTENT AREA  -->
         <div id="content" class="main-content">
+            @include('dashboard.includes.alerts.success')
             @yield('content')
-            @include('dashboard.includes.alerts._session')
             @include('dashboard.includes.common.footer')
         </div>
         <!--  END CONTENT AREA  -->
     </div>
     <!-- END MAIN CONTAINER -->
-    @include('dashboard.includes.common.tpl_end')
+@include('dashboard.includes.common.tpl_end')

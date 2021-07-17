@@ -7,7 +7,7 @@
     <br>
     <div class="col-sm-12">
         <h4 class="mb-0">
-            {{trans('users.add_new_user')}}
+            {{trans('users.edit_user')}}
         </h4>
     </div>
     <br>
@@ -21,8 +21,8 @@
                 </a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-                <a href="{{route('user.create')}}">
-                    {{trans('users.add_new_user')}}
+                <a href="#">
+                    {{trans('users.edit_user')}}
                 </a>
             </li>
         </ol>
@@ -31,17 +31,18 @@
     <br>
     @include('dashboard.includes.alerts._errors')
     <!-- Start Create New User Form -->
-    <form action="{{ route('user.store') }}" method="post">
+    <form action="{{ route('user.update', $user->id) }}" method="post">
         @csrf
-        <!-- Start Email & Password -->
+        @method('POST')
+        <!-- Start First Name And Last Name -->
         <div class="form-row mb-4">
             <div class="form-group col-md-6">
                 <label>{{trans('users.first_name')}}</label>
-                <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}" placeholder="{{trans('users.enter_first_name')}}">
+                <input type="text" name="first_name" class="form-control" value="{{ $user->first_name }}" placeholder="{{trans('users.enter_first_name')}}">
             </div>
             <div class="form-group col-md-6">
                 <label>{{trans('users.last_name')}}</label>
-                <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}" placeholder="{{trans('users.enter_last_name')}}">
+                <input type="text" name="last_name" class="form-control" value="{{ $user->last_name }}" placeholder="{{trans('users.enter_last_name')}}">
             </div>
         </div>
         <!-- End First Name And Last Name -->
@@ -53,17 +54,8 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text">@</div>
                     </div>
-                    <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="{{trans('users.enter_your_email')}}" > 
+                    <input type="email" name="email" class="form-control" value="{{ $user->email }}" placeholder="{{trans('users.enter_your_email')}}" > 
                 </div>
-            </div>
-            <div class="form-group col-md-6"></div>
-            <div class="form-group col-md-6">
-                <label>{{trans('users.password')}}</label>
-                <input type="password" name="password" class="form-control" placeholder="{{trans('users.enter_your_password')}}">
-            </div>
-            <div class="form-group col-md-6">
-                <label>{{trans('users.password_confirmation')}}</label>
-                <input type="password" name="password_confirmation" class="form-control" placeholder="{{trans('users.enter_your_confirmation_password')}}">
             </div>
         </div>
         <!-- End Email & Password -->
@@ -238,7 +230,7 @@
         </div>
         <br>
         <!-- End Permission Tabs -->
-        <button type="submit" class="btn btn-outline-primary btn-rounded mb-2">{{ trans('users.save') }}</button>
+        <button type="submit" class="btn btn-outline-primary btn-rounded mb-2">{{ trans('general.update') }}</button>
     </form>
     <!--End Create New User Form -->
 </div>

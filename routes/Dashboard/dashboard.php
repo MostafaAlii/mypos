@@ -13,5 +13,12 @@ Route::group([
         Route::get('/users/edit/{id}', 'UserController@edit')->name('user.edit');
         Route::post('/users/update/{id}', 'UserController@update')->name('user.update');
         Route::get('/users/delete/{id}', 'UserController@destroy')->name('user.delete');
+        // Categories
+        Route::get('/category', 'CategoryController@index')->name('category.index');
+        Route::get('/category/create', 'CategoryController@create')->name('category.create');
+        Route::post('/category/store', 'CategoryController@store')->name('category.store');
+        Route::get('/category/edit/{id}', 'CategoryController@edit')->name('category.edit');
+        Route::post('/category/update/{id}', 'CategoryController@update')->name('category.update');
+        Route::get('/category/delete/{id}', 'CategoryController@destroy')->name('category.delete');
     });
 });

@@ -18,4 +18,9 @@ return [
     'category'                  =>          'Categories',
     'stock'                     =>          'Stocks',
     'not_found_record'          =>          'This Record Not Found',
+    'created_at'                =>          'Created At',
+    'updated_at'                =>          'Updated At',
+    'action'                    =>          'Action',
+    'save'                      =>          'Save',
+    'update'                    =>          'Updating',
 ];

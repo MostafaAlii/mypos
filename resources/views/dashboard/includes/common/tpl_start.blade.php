@@ -14,6 +14,8 @@
     <link href="{{asset('dashboard/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/plugins/font-icons/fontawesome/css/regular.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/plugins/font-icons/fontawesome/css/fontawesome.css')}}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
@@ -26,6 +28,8 @@
     <link href="{{asset('dashboard/plugins/table/datatable/dt-global_style.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/plugins/table/datatable/custom_dt_custom.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/elements/alert.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/assets/css/components/tabs-accordian/custom-tabs.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/assets/css/forms/theme-checkbox-radio.css')}}" rel="stylesheet" type="text/css" />
     <style>
         .btn-light { border-color: transparent; }
     </style>

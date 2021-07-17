@@ -2,11 +2,13 @@
 return [
     'users_page_title'               =>          'Member Area',
     'users_in_sidebar'               =>          'Member Managment',
+    'users'                          =>          'Users',
     'members'                        =>          'Members',
     'members_and_users'              =>          'Members And Users',
     'add_member'                     =>          'Add User Or Member',
     'manage_all_user'                =>          'Manage All Users and Member',
     'add_new_user'                   =>          'Create New User',
+    'edit_user'                      =>          'Edit User Information',
     'show_all'                       =>          'Show All',
     'full_name'                      =>          'Full Name',
     'enter_full_name'                =>          'Typing Your Full Name',

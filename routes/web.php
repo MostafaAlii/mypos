@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+//Auth::routes();
+Auth::routes(['register' => false]);
+// Guest Member Non Authentication
+Route::group(['middleware' => 'guest'], function () {
 
-//Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/', function () {
+        return view('auth.login');
+    });
+
+});
 

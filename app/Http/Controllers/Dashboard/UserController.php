@@ -15,16 +15,63 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
+        //dd($request->all());
         $request->validate([
             'first_name'=>'required',
             'last_name'=>'required',
             'email'=>'required',
             'password'=>'required|confirmed',
         ]);
-        $request_data = $request->except(['password']);
+        $request_data = $request->except(['password', 'password_confirmation', 'permissions']);
         $request_data['password'] = bcrypt($request->password);
         $user = User::create($request_data);
-        session()->flash('success', trans('general.your_data_creating_successfully'));
-        return redirect()->route('user.index');
+        $user->attachRole('admin');
+        return redirect()->route('user.index')->with(['success' => trans('general.your_data_creating_successfully')]);
+        $user->syncPermissions($request->permissions);
+    }
+
+    public function edit($id){
+        $user = User::find($id);
+        return view('dashboard.pages.users.edit', compact('user'));
+    }
+
+    public function update(Request $request, $id){
+        $request->validate([
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'email'=>'required',
+        ]);
+        $user = User::find($id);
+        $request_data = $request->except(['permissions']);
+        $user->update($request_data);
+        return redirect()->route('user.index')->with(['success' => trans('general.your_data_updating_successfully')]);
+        $user->syncPermissions($request->permissions);
+    }
+
+    public function destroy($id){
+        try {
+            //get specific categories and its translations
+            $user = User::find($id);
+            if (!$user)
+                return redirect()->route('user.index')->with(['error'=>trans('general.not_found_record')]);
+
+            $user->delete();
+
+            return redirect()->route('user.index')->with(['success' => trans('general.your_data_deleting_successfully')]);
+
+        } catch (\Exception $ex) {
+            return redirect()->route('user.index')->with(['error' => trans('general.some_error_happining')]);
+        }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

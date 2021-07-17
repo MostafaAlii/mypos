@@ -176,7 +176,7 @@
                     <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
                         <div class="user-profile-section">
                             <div class="media mx-auto">
-                                <img src="{{asset('dashboard/assets/img/90x90.jpg')}}" class="img-fluid mr-2" alt="avatar">
+                                <img src="{{auth()->user()->image_path}}" class="img-fluid mr-2" alt="avatar">
                                 <div class="media-body">
                                     <h5>{{ strtoupper(auth()->user()->first_name . ' ' . auth()->user()->last_name) }}</h5>
                                 </div>

@@ -31,7 +31,7 @@
     <br>
     @include('dashboard.includes.alerts._errors')
     <!-- Start Create New User Form -->
-    <form action="{{ route('user.store') }}" method="post">
+    <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <!-- Start Email & Password -->
         <div class="form-row mb-4">
@@ -67,6 +67,35 @@
             </div>
         </div>
         <!-- End Email & Password -->
+        <!-- Start Image Uploader With Privew -->
+        <div class="statbox widget box box-shadow">
+            <!-- Start Widget Header -->
+            <div class="widget-header">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                        <h4>{{trans('users.upload_your_image')}}</h4>
+                    </div>      
+                </div>
+            </div>
+            <!-- End Widget Header -->
+            <!-- Start Widget Content -->
+            <div class="widget-content widget-content-area">
+                <!-- Start Single Custom File Uploader -->
+                <div class="custom-file-container" data-upload-id="myFirstImage">
+                <label>{{trans('users.not_want_image')}} <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                    <label class="custom-file-container__custom-file" >
+                        <input type="file" name="image" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                        <span class="custom-file-container__custom-file__custom-file-control"></span>
+                    </label>
+                    <div class="custom-file-container__image-preview"></div>
+                </div>
+                <!-- End Single Custom File Uploader -->
+            </div>
+            <!-- End Widget Content -->
+        </div>
+        <!-- End Image Uploader With Privew -->
+        <br>
         <!-- Start Permission Tabs -->
         <div class="statbox widget box box-shadow">
             <!-- Start Widget Header -->

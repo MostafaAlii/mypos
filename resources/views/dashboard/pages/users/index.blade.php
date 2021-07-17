@@ -39,9 +39,8 @@
                     <table id="style-2" class="table style-2  table-hover">
                         <thead>
                             <tr>
-                                <th class="checkbox-column dt-no-sorting"> Record Id </th>
+                                <th class="checkbox-column dt-no-sorting">#</th>
                                 <th>{{ trans('users.first_name') }}</th>
-                                <th>{{ trans('users.last_name') }}</th>
                                 <th class="text-center">{{ trans('users.image') }}</th>
                                 <th>{{ trans('users.email') }}</th>
                                 <th class="text-center dt-no-sorting">{{ trans('users.action') }}</th>
@@ -51,11 +50,10 @@
                             @foreach($users as $index=>$user)
                             <tr>
                                 <td class="checkbox-column">{{ $index + 1 }}</td>
-                                <td>{{ $user->first_name }}</td>
-                                <td>{{ $user->last_name }}</td>
+                                <td>{{ $user->first_name }} {{ $user->last_name }}</td>
                                 <td class="text-center">
                                     <span>
-                                        <img src="{{asset('dashboard/assets/img/90x90.jpg')}}" class="rounded-circle profile-img" alt="avatar">
+                                        <img src="{{$user->image_path}}" class="rounded-circle profile-img">
                                     </span>
                                 </td>
                                 <td>{{ $user->email }}</td>

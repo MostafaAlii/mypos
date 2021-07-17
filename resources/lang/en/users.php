@@ -24,6 +24,8 @@ return [
     'enter_your_confirmation_password'=>         'Typing Your Confirmation Password',
     'phone'                          =>          'Mobile No.',
     'image'                          =>          'Avatar',
+    'upload_your_image'              =>          'Upload Your Avatar',
+    'not_want_image'                 =>          'if you not want image click X or took it',
     'action'                         =>          'Actions',
     'Edit'                           =>          'Edit',
     'delete'                         =>          'Delete',

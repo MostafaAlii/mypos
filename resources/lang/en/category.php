@@ -10,6 +10,9 @@ return [
     'edit_category'                     =>          'Edit Category Information',
     'show_all'                          =>          'Show All',
     'enter_category_name'               =>          'Typing Your Category Name',
+    'product_related_count'             =>          'Number Of Related Product',
+    'related_product'                   =>          'Related Product',
+    
     'your_category_creating_successfully'=>         'Your Category Creating Successfully',
     'your_category_updating_successfully'=>         'Your Category Updating Successfully',
     'your_category_deleting_successfully'=>         'Your Category Deleting Successfully',

@@ -7,7 +7,7 @@
     <br>
     <div class="col-sm-12">
         <h4 class="mb-0">
-            {{trans('product.add_new_product')}}
+            {{trans('product.edit_product')}}
         </h4>
     </div>
     <br>
@@ -21,8 +21,8 @@
                 </a>
             </li>
             <li class="breadcrumb-item active">
-                <a href="{{route('product.create')}}">
-                {{trans('product.add_new_product')}}
+                <a href="#">
+                {{trans('product.edit_product')}}
                 </a>
             </li>
         </ol>
@@ -31,7 +31,7 @@
     <br>
     @include('dashboard.includes.alerts._errors')
     <!-- Start Create Category Form -->
-    <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('product.update', $product->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="user_email" value="{{ auth()->user()->email }}">
         <div class="statbox widget box box-shadow">
@@ -43,7 +43,7 @@
                     <select name="category_id" class="form-control  basic">
                         <optgroup label="{{ trans('product.please_choose_category') }}">
                             @foreach($categories as $category)
-                            <option value="{{ $category->id }}"{{ old('category_id') == $category->id ? 'selected' : '' }}>
+                            <option value="{{ $category->id }}"{{ $product->category_id == $category->id ? 'selected' : '' }}>
                                 {{ $category->name }}
                             </option>
                             @endforeach
@@ -53,7 +53,7 @@
                 <!-- Start Product Referance -->
                 <div class="form-group col-md-6">
                     <label>{{trans('product.product_referance')}}</label>
-                    <input type="text" name="referances" value="{{old('referances')}}" class="form-control" value="{{ old('referance') }}" placeholder="{{trans('product.enter_referance')}}">
+                    <input type="text" name="referances" value="{{ $product->referances }}" class="form-control" value="{{ old('referance') }}" placeholder="{{trans('product.enter_referance')}}">
                 </div>
                 <!-- End Product Referance -->
             </div>
@@ -63,14 +63,14 @@
                 @foreach(config('translatable.locales') as $locale)
                 <div class="form-group col-md-6">
                     <label>{{trans('product.' .$locale. '.product_name')}}</label>
-                    <input type="text" name="{{$locale}}[name]" class="form-control" value="{{old($locale . '.name')}}" placeholder="{{trans('product.' .$locale. '.enter_product_name')}}">
+                    <input type="text" name="{{$locale}}[name]" class="form-control" value="{{$product->translate($locale)->name}}" placeholder="{{trans('product.' .$locale. '.enter_product_name')}}">
                 </div>
                 @endforeach
                 @foreach(config('translatable.locales') as $locale)
                 <div class="form-group col-md-6">
                     <label>{{trans('product.' .$locale. '.product_description')}}</label>
                     <textarea type="text" name="{{$locale}}[description]" class="form-control ckeditor">
-                        {{old($locale . '.description')}}
+                        {{$product->translate($locale)->description}}
                     </textarea>
                 </div>
                 @endforeach
@@ -95,7 +95,7 @@
                     <!-- Start widget-content -->
                     <div class="widget-content widget-content-area">
                         <label for="purches_price">$999,9999,999.99</label>
-                        <input type="number" value="{{old('purchase_price')}}" name="purchase_price" class="form-control mb-4" id="purches_price">
+                        <input type="number" value="{{ $product->purchase_price }}" name="purchase_price" class="form-control mb-4" id="purches_price">
                     </div>
                     <!-- End widget-content -->
                 </div>
@@ -114,7 +114,7 @@
                     <!-- Start widget-content -->
                     <div class="widget-content widget-content-area">
                         <label for="sale_price">$999,9999,999.99</label>
-                        <input type="number" value="{{old('sale_price')}}" name="sale_price" class="form-control mb-4" id="sale_price">
+                        <input type="number" value="{{ $product->sale_price }}" name="sale_price" class="form-control mb-4" id="sale_price">
                     </div>
                     <!-- End widget-content -->
                 </div>
@@ -134,7 +134,7 @@
                     <!-- End widget-header -->
                     <!-- Start widget-content -->
                     <div class="widget-content widget-content-area">
-                        <input type="number" name="stock" value="{{old('stock')}}" class="form-control mb-4" id="stock">
+                        <input type="number" name="stock" value="{{ $product->stock }}" class="form-control mb-4" id="stock">
                     </div>
                     <!-- End widget-content -->
                 </div>
@@ -164,7 +164,9 @@
                         <input type="hidden" name="" value="" />
                         <span class="custom-file-container__custom-file__custom-file-control"></span>
                     </label>
-                    <div class="custom-file-container__image-preview"></div>
+                    <div class="custom-file-container__image-preview">
+                        <img src="{{ $product->image_path }}" style="width:200px;heigt:200px;border-radius:50%;border: 6px solid rgba(68, 94, 222, 0.24);" class="img-thumbnail image-preview">
+                    </div>
                 </div>
                 <!-- End Single Custom File Uploader -->
             </div>
@@ -190,7 +192,7 @@
         </div>
         <!-- End product Status -->
         <br>
-        <button type="submit" class="btn btn-outline-primary btn-rounded mb-2">{{ trans('general.save') }}</button>
+        <button type="submit" class="btn btn-outline-primary btn-rounded mb-2">{{ trans('general.update') }}</button>
     </form>
 </div>
 @endsection

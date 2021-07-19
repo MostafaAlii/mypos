@@ -8,7 +8,7 @@ class Product extends Model
     protected $with = ['translations'];
     protected $translatedAttributes = ['name', 'description'];
     protected $guarded = [];
-    protected $append = ['image_path'];
+    protected $append = ['image_path', 'profit_precent'];
     protected $hidden = ['translations'];
     protected $casts = [
         'status' => 'boolean',
@@ -22,6 +22,11 @@ class Product extends Model
     }
     public function getImagePathAttribute(){
         return asset('uploads/products_images/' . $this->image);
+    }
+    public function getProfitPrecentAttribute(){
+        $profit = $this->sale_price - $this->purchase_price;
+        $profit_precent = $profit * 100 / $this->purchase_price;
+        return number_format($profit_precent, 2) . ' %';
     }
 
 }

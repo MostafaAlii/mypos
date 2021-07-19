@@ -41,6 +41,7 @@
                                 <tr>
                                     <th class="checkbox-column dt-no-sorting">#</th>
                                     <th>{{ trans('category.category_name') }}</th>
+                                    <th>{{ trans('category.product_related_count') }}</th>
                                     <th>{{ trans('general.created_at') }}</th>
                                     <th>{{ trans('general.updated_at') }}</th>
                                     <th class="text-center dt-no-sorting">{{ trans('general.action') }}</th>
@@ -51,6 +52,7 @@
                                 <tr>
                                     <td class="checkbox-column">{{ $index + 1 }}</td>
                                     <td>{{ $category->name }}</td>
+                                    <td>{{ $category->products->count() }}</td>
                                     <td>{{ $category->created_at }}</td>
                                     <td>{{ $category->updated_at }}</td>
                                     <td class="text-center">

@@ -2,8 +2,10 @@
 return [
     'product_in_sidebar'            =>          '- Products Managmemt',
     'products'                      =>          'Products',
+    'parent_category'               =>          'Category',
     'add_products'                  =>          'Add Product',
     'add_new_product'               =>          'Add New Product',
+    'edit_product'                  =>          'Edit Product Information',
     'show_all'                      =>          'Show All',
     'product_page_title'            =>          'Product Area',
     'manage_all_products'           =>          'Manage All Products',
@@ -21,6 +23,9 @@ return [
     'choose_category'               =>          'Choose Category',
     'please_choose_category'        =>          'Please Choose Related Category',
     'your_product_creating_successfully'=>  'Your Product Creating Successflly',
+    'your_product_updating_successfully'=>  'Your Product Updating Successflly',
+    'your_product_deleted_successfully'=>  'Your Product Deleted Successflly',
+    'profit_precent'                =>          'Profit Ratio',
     'category_id'                   =>          'Category',
     'en'    =>      [
         'name'                     =>          'Product Name In English',

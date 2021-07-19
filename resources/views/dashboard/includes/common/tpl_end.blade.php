@@ -28,13 +28,6 @@
     <script src="{{asset('dashboard/plugins/input-mask/input-mask.js')}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script>
-        // Feather Icon 
-        feather.replace();
-        // Single Upload For Users Image
-        var firstUpload = new FileUploadWithPreview('myFirstImage');
-        $(".tagging").select2({
-            tags: true
-        });
         // DataTable
         c2 = $('#style-2').DataTable({
             headerCallback:function(e, a, t, n, s) {
@@ -62,6 +55,13 @@
         // Select Box
         var ss = $(".basic").select2({
             tags: true,
+        });
+        // Feather Icon 
+        feather.replace();
+        // Single Upload For Users Image
+        var firstUpload = new FileUploadWithPreview('myFirstImage');
+        $(".tagging").select2({
+            tags: true
         });
         // Purchase & sales Price Input Mask
         $("#purches_price").inputmask({mask:"$999,9999,999.99"});

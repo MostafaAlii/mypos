@@ -40,6 +40,7 @@
                             <thead>
                                 <tr>
                                     <th class="checkbox-column dt-no-sorting">#</th>
+                                    <td>{{ trans('product.parent_category') }}</td>
                                     <th>{{ trans('product.product_referance') }}</th>
                                     <th>{{ trans('product.product_name') }}</th>
                                     <th>{{ trans('product.product_description') }}</th>
@@ -48,6 +49,7 @@
                                     <th>{{ trans('product.product_quantity_in_stock') }}</th>
                                     <th>{{ trans('product.product_purchase_price') }}</th>
                                     <th>{{ trans('product.product_sale_price') }}</th>
+                                    <th>{{ trans('product.profit_precent') }} %</th>
                                     <th>{{ trans('general.created_at') }}</th>
                                     <th>{{ trans('general.updated_at') }}</th>
                                     <th class="text-center dt-no-sorting">{{ trans('general.action') }}</th>
@@ -57,6 +59,7 @@
                                 @foreach($products as $index=>$product)
                                 <tr>
                                     <td class="checkbox-column">{{ $index + 1 }}</td>
+                                    <td>{{ $product->category->name }}</td>
                                     <td>{{ $product->referances }}</td>
                                     <td>{{ $product->name }}</td>
                                     <td>{!! $product->description !!}</td>
@@ -69,6 +72,7 @@
                                     <td>{{ $product->stock }}</td>
                                     <td>{{ $product->purchase_price }}</td>
                                     <td>{{ $product->sale_price }}</td>
+                                    <td>{{ $product->profit_precent }}</td>
                                     <td>{{ $product->created_at }}</td>
                                     <td>{{ $product->updated_at }}</td>
                                     <td class="text-center">

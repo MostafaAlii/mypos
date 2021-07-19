@@ -14,9 +14,10 @@ return [
         'super_admin' => [
             'categories' => 'c,r,u,d',
             'products' => 'c,r,u,d',
+            'stocks'=>'c,r,u,d',
             'users' => 'c,r,u,d',
         ],
-        'admin' => []
+        'admin' => [],
     ],
 
     'permissions_map' => [

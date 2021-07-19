@@ -7,4 +7,7 @@ class Category extends Model
     public function products(){
         return $this->hasMany('App\Models\Product');
     }
+    public function stocks(){
+        return $this->hasMany('App\Models\Stock');
+    }
 }

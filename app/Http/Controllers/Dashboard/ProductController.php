@@ -105,4 +105,15 @@ class ProductController extends Controller
             return redirect()->route('product.index')->with(['error' => trans('general.some_error_happining')]);
         }
     }
+
+    public function updateInStock(Request $request){
+        $product = Product::find($id);
+        $rules += [
+            'stock' => 'required|numeric',
+        ];
+        $request->validate($rules);
+        $request_data = $request->stock;
+        $product->update($request_data);
+        return redirect()->route('stock.index')->with(['success' => trans('product.your_product_updating_successfully')]);
+    }
 }

@@ -27,5 +27,8 @@ Route::group([
         Route::get('/product/edit/{id}', 'ProductController@edit')->name('product.edit');
         Route::post('/product/update/{id}', 'ProductController@update')->name('product.update');
         Route::get('/product/delete/{id}', 'ProductController@destroy')->name('product.delete');
+        // Products
+        Route::get('/stock', 'StockController@index')->name('stock.index');
+        Route::post('/stock/update', 'ProductController@updateInStock')->name('stock.update');
     });
 });

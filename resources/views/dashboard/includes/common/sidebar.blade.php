@@ -148,14 +148,11 @@
                             </div>
                         </a>
                         <ul class="collapse submenu list-unstyled" id="stocks" data-parent="#accordionExample">
+                            @if(auth()->user()->hasPermission('stocks_read'))
                             <li>
-                                <a href="{{--route('stocks.create')--}}">{{trans('stock.add_stocks')}}</a>
+                                <a href="{{route('stock.index')}}">{{trans('stock.show_all')}}</a>
                             </li>
-                            {{--@if(auth()->user()->hasPermission('products_read'))--}}
-                            <li>
-                                <a href="{{--route('stocks.index')--}}">{{trans('stock.show_all')}}</a>
-                            </li>
-                            {{--@endif--}}
+                            @endif
                         </ul>
                     </li>
                     <!-- End Product Tab -->

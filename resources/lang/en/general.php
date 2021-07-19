@@ -23,4 +23,6 @@ return [
     'action'                    =>          'Action',
     'save'                      =>          'Save',
     'update'                    =>          'Updating',
+    'not_active'                =>          'Not Active',
+    'active'                    =>          'Active',
 ];

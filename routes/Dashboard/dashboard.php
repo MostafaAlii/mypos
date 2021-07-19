@@ -20,5 +20,12 @@ Route::group([
         Route::get('/category/edit/{id}', 'CategoryController@edit')->name('category.edit');
         Route::post('/category/update/{id}', 'CategoryController@update')->name('category.update');
         Route::get('/category/delete/{id}', 'CategoryController@destroy')->name('category.delete');
+        // Products
+        Route::get('/product', 'ProductController@index')->name('product.index');
+        Route::get('/product/create', 'ProductController@create')->name('product.create');
+        Route::post('/product/store', 'ProductController@store')->name('product.store');
+        Route::get('/product/edit/{id}', 'ProductController@edit')->name('product.edit');
+        Route::post('/product/update/{id}', 'ProductController@update')->name('product.update');
+        Route::get('/product/delete/{id}', 'ProductController@destroy')->name('product.delete');
     });
 });

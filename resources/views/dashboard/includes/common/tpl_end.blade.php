@@ -21,10 +21,21 @@
     <script src="{{asset('dashboard/assets/js/scrollspyNav.js')}}"></script>
     <script src="{{asset('dashboard/plugins/font-icons/feather/feather.min.js')}}"></script>
     <script src="{{asset('dashboard/plugins/file-upload/file-upload-with-preview.min.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/select2/select2.min.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/select2/custom-select2.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/editors/ckeditor/ckeditor.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/input-mask/jquery.inputmask.bundle.min.js')}}"></script>
+    <script src="{{asset('dashboard/plugins/input-mask/input-mask.js')}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script>
+        // Feather Icon 
         feather.replace();
+        // Single Upload For Users Image
         var firstUpload = new FileUploadWithPreview('myFirstImage');
+        $(".tagging").select2({
+            tags: true
+        });
+        // DataTable
         c2 = $('#style-2').DataTable({
             headerCallback:function(e, a, t, n, s) {
                 e.getElementsByTagName("th")[0].innerHTML='<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
@@ -47,8 +58,15 @@
             "lengthMenu": [5, 10, 20, 50],
             "pageLength": 5 
         });
-
         multiCheck(c2);
+        // Select Box
+        var ss = $(".basic").select2({
+            tags: true,
+        });
+        // Purchase & sales Price Input Mask
+        $("#purches_price").inputmask({mask:"$999,9999,999.99"});
+        $("#sale_price").inputmask({mask:"$999,9999,999.99"});
+        $("#stock").inputmask({mask:"$999,9999,999.99"});
     </script>
 </body>
 </html>

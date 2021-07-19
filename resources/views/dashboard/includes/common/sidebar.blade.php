@@ -89,6 +89,76 @@
                         </ul>
                     </li>
                     <!-- End Category Tab -->
+                    <!-- Start Product Head Title -->
+                    <li class="menu menu-heading">
+                        <div class="heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <span>{{trans('product.product_in_sidebar')}}</span>
+                        </div>
+                    </li>
+                    <!-- End Product Head Title -->
+                    <!-- Start Product Tab -->
+                    <li class="menu">
+                        <a href="#products" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i data-feather="shopping-bag"></i>
+                                <span>{{trans('product.products')}}</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="products" data-parent="#accordionExample">
+                            <li>
+                                <a href="{{route('product.create')}}">{{trans('product.add_products')}}</a>
+                            </li>
+                            @if(auth()->user()->hasPermission('products_read'))
+                            <li>
+                                <a href="{{route('product.index')}}">{{trans('product.show_all')}}</a>
+                            </li>
+                            @endif
+                        </ul>
+                    </li>
+                    <!-- End Product Tab -->
+                    <!-- Start Stock Head Title -->
+                    <li class="menu menu-heading">
+                        <div class="heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <span>{{trans('stock.stock_in_sidebar')}}</span>
+                        </div>
+                    </li>
+                    <!-- End Stock Head Title -->
+                    <!-- Start Product Tab -->
+                    <li class="menu">
+                        <a href="#stocks" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i data-feather="layers"></i>
+                                <span>{{trans('stock.stocks')}}</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="stocks" data-parent="#accordionExample">
+                            <li>
+                                <a href="{{--route('stocks.create')--}}">{{trans('stock.add_stocks')}}</a>
+                            </li>
+                            {{--@if(auth()->user()->hasPermission('products_read'))--}}
+                            <li>
+                                <a href="{{--route('stocks.index')--}}">{{trans('stock.show_all')}}</a>
+                            </li>
+                            {{--@endif--}}
+                        </ul>
+                    </li>
+                    <!-- End Product Tab -->
                 </ul>
                 
             </nav>

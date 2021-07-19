@@ -31,6 +31,8 @@
     <link href="{{asset('dashboard/assets/css/elements/alert.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/components/tabs-accordian/custom-tabs.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('dashboard/assets/css/forms/theme-checkbox-radio.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/plugins/select2/select2.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('dashboard/assets/css/forms/switches.css')}}" rel="stylesheet" type="text/css" />
     <style>
         .btn-light { border-color: transparent; }
     </style>

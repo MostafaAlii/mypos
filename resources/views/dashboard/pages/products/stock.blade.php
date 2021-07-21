@@ -49,12 +49,16 @@
                             <!-- Start Product Name Select -->
                             <div class="form-group col-md-3">
                                 <label>{{ trans('stock.choose_product_name') }}</label>
+                                <input type="hidden" name="id" value="{{ $product->id}}">
+
                                 <select name="name" class="form-control  basic">
                                     <optgroup label="{{ trans('stock.choose_product_name') }}">
                                         @foreach($products as $product)
+                                        
                                         <option>
                                             {{ $product->name }}
                                         </option>
+                                        
                                         @endforeach
                                 </select>
                             </div>
@@ -63,7 +67,7 @@
                             <div class="form-group col-md-3">
                                 <div class="form-group d-block text-left">
                                     <label for="stockQuantity" class="d-block">{{ trans('stock.change_quantity') }}</label>
-                                    <input type="number" id="stockQuantity" class=" form-control mt-2" aria-describedby="quantityHelper">
+                                    <input type="number" name="stock" id="stockQuantity" class=" form-control mt-2" aria-describedby="quantityHelper">
                                     <small id="quantityHelper" class="text-muted">
                                     {{ trans('stock.min_char') }}
                                     </small>

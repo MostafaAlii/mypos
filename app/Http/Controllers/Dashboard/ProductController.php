@@ -106,14 +106,19 @@ class ProductController extends Controller
         }
     }
 
+    public function stockIndex(){
+        $products = Product::all();
+        $categories = Category::all();
+        return view('dashboard.pages.products.stock', compact(['products','categories']));
+    }
+
     public function updateInStock(Request $request){
-        $product = Product::find($id);
-        $rules += [
-            'stock' => 'required|numeric',
-        ];
-        $request->validate($rules);
-        $request_data = $request->stock;
-        $product->update($request_data);
+        //dd($id);
+        $product = Product::findOrFail($request->id);
+        //$id = Product::where($request->name , 'name')->select('id');
+        //$request->validate($rules);
+        $product->stock = $request->stock;
+        $product->save();
         return redirect()->route('stock.index')->with(['success' => trans('product.your_product_updating_successfully')]);
     }
 }

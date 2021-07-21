@@ -16,4 +16,11 @@ return [
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
+    'login_page_title'=>'Welcome | Login To Techno POS',
+    'sign_in'=> 'Sign In',
+    'login_to_your_account'=>'Log in to your account to continue.',
+    'email'=>'Email',
+    'password'=>'Password',
+    'login'=>'Login',
+
 ];
